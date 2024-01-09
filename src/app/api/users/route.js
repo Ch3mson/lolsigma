@@ -1,5 +1,21 @@
 
 
+import { kv } from '@vercel/kv';
+import { NextResponse } from 'next/server';
+ 
+export async function GET() {
+  const user = await kv.hgetall('user:me');
+  return NextResponse.json(user);
+}
+
+
+
+
+
+
+
+
+/*
 const API_KEY = "RGAPI-3b92d49e-4f44-4db7-95b1-50749c78eb99";
 
 async function getPlayerPUUID(playerName, playerTag) {
@@ -44,3 +60,5 @@ async function getMatches(puuid, count) {
 export async function GET() {
     return new Response('yo fam');
 }
+
+*/

@@ -1,8 +1,9 @@
 
 'use client'
 import React, { useState } from 'react';
-import Overview from '../components/overview';
-import { useRouter } from 'next/navigation'
+import Overview from '../../components/overview';
+import { useRouter } from 'next/navigation';
+
 
 export default function Home() {
   
